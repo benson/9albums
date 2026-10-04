@@ -75,3 +75,17 @@ li.playing .song { color: var(--fg); }
   main { padding-top: 36px; }
 }
 .song:empty::before { content: none; }
+
+.cut { grid-column: 1 / -1; border-top: 1px solid var(--tile); margin: 4px 0; }
+li.out { opacity: 0.4; transition: opacity 0.2s; }
+li.out:hover, li.out.playing { opacity: 1; }
+
+.editing .cover { cursor: grab; touch-action: manipulation; -webkit-touch-callout: none; user-select: none; }
+.editing .cover img { pointer-events: none; -webkit-user-drag: none; }
+.sorting, .sorting .cover { cursor: grabbing; }
+.sorting .ring { opacity: 0 !important; }
+li.dragging { position: relative; z-index: 2; opacity: 0.9; }
+
+#copy { display: none; margin-top: 40px; border: 0; background: none; color: var(--muted); font: inherit; cursor: pointer; }
+#copy:hover { color: var(--fg); }
+.editing #copy { display: block; }
