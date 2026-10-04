@@ -38,10 +38,11 @@ function stop() {
 function toggle(li, a) {
   const same = current === li;
   stop();
-  if (same || !a.preview) return;
+  const src = a.clip || a.preview;
+  if (same || !src) return;
   current = li;
   li.classList.add('playing');
-  audio.src = a.preview;
+  audio.src = src;
   audio.currentTime = 0;
   audio.play().catch(stop);
 }

@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "artist": "Linkin Park",
+    "album": "Hybrid Theory",
+    "song": "Cure for the Itch",
+    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/60/36/ba/6036ba66-3fb6-e749-5bce-f6cd08f3e768/mzaf_9028546458609382026.plus.aac.p.m4a",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/53/a7/7f/53a77fab-c54c-a57b-8130-248fc12d0c80/093624948995.jpg/1000x1000bb.jpg",
+    "start": "0:50",
+    "clip": "clips/linkin-park-cure-for-the-itch.m4a"
+  },
+  {
+    "artist": "Despised Icon",
+    "album": "The Ills of Modern Man",
+    "song": "A Fractured Hand",
+    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bf/a8/5d/bfa85d1d-d5a1-87e5-820f-49317b4e5a1c/mzaf_6226330178075737775.plus.aac.p.m4a",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c7/dd/79/c7dd799e-5286-992b-5e93-4d5df07655a1/886443596917.jpg/1000x1000bb.jpg",
+    "start": "1:40",
+    "clip": "clips/despised-icon-a-fractured-hand.m4a"
+  }
+]
