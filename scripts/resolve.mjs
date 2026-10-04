@@ -1,5 +1,5 @@
 // fills preview + art for each entry in albums.json via the itunes search api
-// entries with "start": "m:ss" get a 30s clip cut from youtube into clips/ (needs yt-dlp + ffmpeg)
+// entries with "start": "m:ss" (optional "yt": video id to pin the source) get a 30s clip cut from youtube into clips/ (needs yt-dlp + ffmpeg)
 import { readFile, writeFile, mkdir, rm, readdir } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
@@ -18,7 +18,7 @@ for (const a of albums) {
   if (!a.start || (a.clip && !force)) continue;
   const tmp = join(tmpdir(), `9albums-${slug(a)}`);
   await rm(tmp, { recursive: true, force: true });
-  const info = execFileSync('python', ['-m', 'yt_dlp', `ytsearch1:${a.artist} ${a.song} audio`, '-f', 'bestaudio',
+  const info = execFileSync('python', ['-m', 'yt_dlp', a.yt ? `https://youtu.be/${a.yt}` : `ytsearch1:${a.artist} ${a.song} audio`, '-f', 'bestaudio',
     '-o', join(tmp, 'src.%(ext)s'), '--print', 'after_move:%(title)s | %(channel)s | %(duration_string)s', '-q', '--no-warnings'], { encoding: 'utf8' }).trim();
   await mkdir(new URL('../clips', import.meta.url), { recursive: true });
   const out = `clips/${slug(a)}.m4a`;
