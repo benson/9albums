@@ -103,5 +103,15 @@
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1d/d2/f7/1dd2f748-8430-6243-58b1-166d7d599211/00817424011969_Cover.jpg/1000x1000bb.jpg",
     "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f2/da/5f/f2da5f06-85af-82ed-a3a3-eb3b43952c1f/mzaf_8800576998062354059.plus.aac.p.m4a",
     "clip": "clips/after-the-burial-aspiration.m4a"
+  },
+  {
+    "artist": "The Offspring",
+    "album": "Smash",
+    "song": "Nitro (Youth Energy)",
+    "start": "0:00",
+    "yt": "75wjSlubTgo",
+    "clip": "clips/the-offspring-nitro-youth-energy.m4a",
+    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fd/5f/43/fd5f43f8-a20a-b6a6-ef1c-f3e364ee6a1f/mzaf_16670862490872980565.plus.aac.p.m4a",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/af/a3/6f/afa36ff7-01fd-f054-1e05-b257aff7cd20/0045778686865.png/1000x1000bb.jpg"
   }
 ]
