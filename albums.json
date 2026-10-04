@@ -74,5 +74,14 @@
     "clip": "clips/the-acacia-strain-whoa-shut-it-down.m4a",
     "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5d/f0/60/5df060aa-58bd-a56f-6646-d4fd38c22a11/mzaf_597964140572945641.plus.aac.p.m4a",
     "art": "https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/91/f9/4d/91f94d56-32df-5b53-b286-f569a84e6eea/656191003339.jpg/1000x1000bb.jpg"
+  },
+  {
+    "artist": "Have Heart",
+    "album": "The Things We Carry",
+    "song": "The Unbreakable",
+    "start": "0:25",
+    "yt": "wVNR9JezA_A",
+    "art": "art/have-heart-the-things-we-carry.jpg",
+    "clip": "clips/have-heart-the-unbreakable.m4a"
   }
 ]
