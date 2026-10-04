@@ -27,7 +27,7 @@ function tile(a) {
       <div class="song">${esc(a.song)}</div>
     </div>`;
   li.querySelector('.cover').addEventListener('click', e => {
-    if (li.dataset.dragged) { delete li.dataset.dragged; return; }
+    if (li.dataset.dragged) return;
     toggle(li, a);
   });
   if (editing) draggable(li);
@@ -85,13 +85,17 @@ function draggable(li) {
 
   cover.addEventListener('pointerdown', e => {
     if (e.button) return;
-    start = { x: e.clientX, y: e.clientY };
-    cover.setPointerCapture(e.pointerId);
+    e.preventDefault();
+    start = { x: e.clientX, y: e.clientY, id: e.pointerId };
     if (e.pointerType === 'touch') timer = setTimeout(begin, 250);
+    addEventListener('pointermove', move);
+    addEventListener('pointerup', end);
+    addEventListener('pointercancel', end);
   });
 
-  cover.addEventListener('pointermove', e => {
-    if (!start) return;
+  // listen on window: moving the tile in the dom drops pointer capture
+  const move = e => {
+    if (!start || e.pointerId !== start.id) return;
     const dx = e.clientX - start.x, dy = e.clientY - start.y;
     if (!dragging) {
       if (Math.hypot(dx, dy) < 6) return;
@@ -112,21 +116,24 @@ function draggable(li) {
     start.x += r1.left - r0.left;
     start.y += r1.top - r0.top;
     li.style.transform = `translate(${e.clientX - start.x}px, ${e.clientY - start.y}px)`;
-  });
+  };
 
-  const end = () => {
+  const end = e => {
+    if (start && e.pointerId !== start.id) return;
     clearTimeout(timer);
     start = null;
+    removeEventListener('pointermove', move);
+    removeEventListener('pointerup', end);
+    removeEventListener('pointercancel', end);
     if (!dragging) return;
     dragging = false;
     li.dataset.dragged = 1;
+    setTimeout(() => delete li.dataset.dragged);
     li.style.transform = '';
     li.classList.remove('dragging');
     grid.classList.remove('sorting');
     saveOrder();
   };
-  cover.addEventListener('pointerup', end);
-  cover.addEventListener('pointercancel', end);
   cover.addEventListener('touchmove', e => { if (dragging) e.preventDefault(); }, { passive: false });
   cover.addEventListener('contextmenu', e => e.preventDefault());
 }
