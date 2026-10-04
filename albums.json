@@ -54,5 +54,15 @@
     "yt": "iD9TRdt0ZXA",
     "art": "art/horse-the-band-the-mechanical-hand.jpg",
     "clip": "clips/horse-the-band-a-million-exploding-suns.m4a"
+  },
+  {
+    "artist": "Protest the Hero",
+    "album": "Kezia",
+    "song": "Turn Soonest to the Sea",
+    "start": "4:50",
+    "yt": "lG_lfuttEJY",
+    "clip": "clips/protest-the-hero-turn-soonest-to-the-sea.m4a",
+    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8f/29/e9/8f29e9df-e2bb-b8ad-ad76-3b1cf55d718b/mzaf_17839649166705113822.plus.aac.p.m4a",
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/06/86/3c/06863c0d-aec4-785e-5301-7e54da27ad5c/4050538155617.jpg/1000x1000bb.jpg"
   }
 ]
