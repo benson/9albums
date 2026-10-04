@@ -30,7 +30,7 @@ for (const a of albums) {
 }
 
 for (const a of albums) {
-  if (a.preview && !force) continue;
+  if ((a.preview || (a.clip && a.art)) && !force) continue;
   const term = encodeURIComponent(`${a.artist} ${a.song}`);
   const res = await fetch(`https://itunes.apple.com/search?term=${term}&entity=song&limit=25`);
   const { results } = await res.json();
